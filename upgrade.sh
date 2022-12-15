@@ -18,7 +18,7 @@ setcap cap_ipc_lock=+ep /usr/local/bin/vault
 
 # Verify vault version
 INSTALLED_VERSION=$(vault --version)
-if [[ $INSTALLED_VERSION != "Vault v${VAULT_VERSION}" ]]; then
+if [[ $INSTALLED_VERSION =~ "^Vault v${VAULT_VERSION}" ]]; then
     echo "Installed version is invalid ${INSTALLED_VERSION}"
     exit 1
 fi
