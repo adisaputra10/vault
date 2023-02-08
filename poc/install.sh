@@ -23,7 +23,7 @@ vault -autocomplete-install
 export VAULT_ADDR="http://127.0.0.1:8200"
 
 # Join cluster
-read -r -p "Join another cluster? (y/N): " joining
+read -r -p "Join a cluster? (y/N): " joining
 if [[ $joining == [yY] || $joining == [yY][eE][sS] ]]; then
     read -r -p "Enter the cluster leader ip: " leader_ip
     vault operator raft join "http://${leader_ip}:8200"
