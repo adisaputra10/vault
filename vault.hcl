@@ -18,9 +18,9 @@ disable_printable_check = true
 
 storage "mysql" {
   ha_enabled = "true"
-  address = "db-jenkins-vault-1.cc54qf5oqihr.ap-southeast-1.rds.amazonaws.com:3306"
-  username = "admin_vault"
-  password = "jASe0UFRh7dPxyGgfthm"
-  database = "vault"
+  address = ""
+  username = ""
+  password = ""
+  database = ""
 
 }
